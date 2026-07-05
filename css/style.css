@@ -183,10 +183,16 @@ strong { color: var(--text); }
   z-index: 1; /* Sits cleanly behind the content card */
 }
 
+.beam-mobile {
+  display: none;
+}
+
 @media (max-width: 768px) {
-  .light {
-    width: 100%;
-    height: 100%;
+  .beam-desktop {
+    display: none;
+  }
+  .beam-mobile {
+    display: block;
   }
 }
 
