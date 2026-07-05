@@ -181,37 +181,37 @@ strong { color: var(--text); }
 .light__beam {
   position: absolute;
   top: 0; left: 50%;
-  width: 220px;
+  width: 320px;
   height: 100%;
   transform: translateX(-50%);
-  background: linear-gradient(to bottom, var(--accent-gold) 0%, transparent 75%);
-  opacity: 0.35;
-  clip-path: polygon(45% 0%, 55% 0%, 100% 100%, 0% 100%);
+  background: linear-gradient(to bottom, var(--accent-gold) 0%, transparent 95%);
+  opacity: 0.5;
+  clip-path: polygon(40% 0%, 60% 0%, 100% 100%, 0% 100%);
   animation: beamPulse 5s ease-in-out infinite;
 }
 .light__glow {
   position: absolute;
   top: 4%;
   left: 50%;
-  width: 260px; height: 260px;
+  width: 400px; height: 400px;
   transform: translateX(-50%);
-  background: radial-gradient(circle, var(--accent-gold-soft) 0%, transparent 70%);
+  background: radial-gradient(circle, var(--accent-gold-soft) 0%, transparent 75%);
   border-radius: 50%;
   animation: glowPulse 4s ease-in-out infinite;
 }
 .light__core {
   position: absolute;
   top: 6%; left: 50%;
-  width: 34px; height: 34px;
+  width: 44px; height: 44px;
   transform: translateX(-50%);
   background: var(--accent-gold);
   border-radius: 50%;
-  box-shadow: 0 0 40px 12px var(--accent-gold-soft);
+  box-shadow: 0 0 60px 18px var(--accent-gold-soft);
   animation: corePulse 3s ease-in-out infinite;
 }
-@keyframes beamPulse { 0%,100% { opacity: 0.25; } 50% { opacity: 0.5; } }
-@keyframes glowPulse { 0%,100% { transform: translateX(-50%) scale(1); } 50% { transform: translateX(-50%) scale(1.12); } }
-@keyframes corePulse { 0%,100% { box-shadow: 0 0 30px 8px var(--accent-gold-soft); } 50% { box-shadow: 0 0 55px 18px var(--accent-gold-soft); } }
+@keyframes beamPulse { 0%,100% { opacity: 0.4; } 50% { opacity: 0.75; } }
+@keyframes glowPulse { 0%,100% { transform: translateX(-50%) scale(1); } 50% { transform: translateX(-50%) scale(1.25); } }
+@keyframes corePulse { 0%,100% { box-shadow: 0 0 45px 12px var(--accent-gold-soft); } 50% { box-shadow: 0 0 80px 24px var(--accent-gold-soft); } }
 
 /* unified tree + root + tech scene */
 .tree-scene {
