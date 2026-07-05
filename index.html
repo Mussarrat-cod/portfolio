@@ -1,401 +1,475 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mussarrat Kittur — Full-Stack Developer</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23000000'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='42' fill='%23FFFFFF'>MK</text></svg>">
-<meta name="description" content="Portfolio of Mussarrat Kittur, full-stack developer and CS student building AI-driven web applications.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mussarrat Kittur — Full-Stack Developer</title>
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23000000'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='42' fill='%23FFFFFF'>MK</text></svg>">
+  <meta name="description"
+    content="Portfolio of Mussarrat Kittur, full-stack developer and CS student building AI-driven web applications.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<!-- ============ NAV ============ -->
-<header class="nav" id="nav">
-  <a href="#top" class="nav__logo">Mussarrat Kittur<span class="nav__logo-dot">.</span></a>
-  <nav class="nav__links" aria-label="Primary">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#play">Play</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <button class="theme-toggle" id="themeToggle" aria-label="Switch to light theme" aria-pressed="false">
-    <span class="theme-toggle__track">
-      <span class="theme-toggle__thumb">
-        <svg class="icon icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-        <svg class="icon icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg>
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__logo">Mussarrat Kittur<span class="nav__logo-dot">.</span></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#play">Play</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Switch to light theme" aria-pressed="false">
+      <span class="theme-toggle__track">
+        <span class="theme-toggle__thumb">
+          <svg class="icon icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+          </svg>
+          <svg class="icon icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z" />
+          </svg>
+        </span>
       </span>
-    </span>
-  </button>
-</header>
+    </button>
+  </header>
 
-<main id="main">
+  <main id="main">
 
-  <!-- ============ HERO: tree / laptop / light scene ============ -->
-  <section class="hero" id="top">
-    <div class="hero__scene" aria-hidden="true">
-      <div class="hero__sky"></div>
+    <!-- ============ HERO: tree / laptop / light scene ============ -->
+    <section class="hero" id="top">
+      <div class="hero__scene" aria-hidden="true">
+        <div class="hero__sky"></div>
 
-      <!-- divine light -->
-      <div class="light">
-        <div class="light__beam"></div>
-        <div class="light__glow"></div>
-        <div class="light__core"></div>
-      </div>
+        <!-- divine light (SVG implementation) -->
+      <svg class="light" viewBox="0 0 1920 1080" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <filter id="beam-blur" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="80" result="blur" />
+          </filter>
+          
+          <filter id="sun-glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="30" result="blur1" />
+            <feGaussianBlur stdDeviation="60" result="blur2" />
+            <feMerge>
+              <feMergeNode in="blur2" />
+              <feMergeNode in="blur1" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
 
-      <!-- unified tree + root + tech scene -->
-      <svg class="tree-scene" viewBox="0 0 700 520" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax meet">
+          <!-- Diagonal gradient for the inclined beam -->
+          <linearGradient id="beam-grad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="var(--beam-color)" stop-opacity="0.65" />
+            <stop offset="50%" stop-color="var(--beam-color)" stop-opacity="0.25" />
+            <stop offset="100%" stop-color="var(--beam-color)" stop-opacity="0" />
+          </linearGradient>
 
-        <!-- canopy -->
-        <g class="tree__canopy">
-          <circle class="leaf" cx="350" cy="150" r="130"/>
-          <circle class="leaf leaf--b" cx="230" cy="200" r="95"/>
-          <circle class="leaf leaf--c" cx="470" cy="200" r="95"/>
-          <circle class="leaf leaf--d" cx="350" cy="80" r="85"/>
-          <circle class="leaf leaf--e" cx="260" cy="110" r="70"/>
-          <circle class="leaf leaf--f" cx="440" cy="110" r="70"/>
-        </g>
-        <g class="fireflies">
-          <circle class="firefly" cx="260" cy="180" r="3"/>
-          <circle class="firefly firefly--2" cx="460" cy="150" r="2.5"/>
-          <circle class="firefly firefly--3" cx="350" cy="220" r="2.5"/>
-          <circle class="firefly firefly--4" cx="400" cy="100" r="2"/>
-        </g>
+          <radialGradient id="halo-grad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="var(--beam-color-soft)" stop-opacity="0.8" />
+            <stop offset="100%" stop-color="var(--beam-color-soft)" stop-opacity="0" />
+          </radialGradient>
+        </defs>
 
-        <!-- trunk -->
-        <path class="tree__trunk" d="M330 335 C325 270 322 220 330 165 C334 145 366 145 370 165 C378 220 375 270 370 335 Z"/>
+        <!-- Ambient wide halo centered at exactly top-left (0,0) -->
+        <circle cx="0" cy="0" r="500" fill="url(#halo-grad)" />
 
-        <!-- ground line -->
-        <line class="ground-line" x1="0" y1="340" x2="700" y2="340"/>
+        <!-- Sharp beam originating precisely from the edges of the corner sun and spreading outwards massively -->
+        <polygon points="0,90 90,0 3500,1080 900,1080" fill="url(#beam-grad)" />
 
-        <!-- exposed roots wrapping the tech -->
-        <g class="roots">
-          <path class="root" d="M340 335 C300 355 260 360 210 372 C160 384 140 400 120 428"/>
-          <path class="root" d="M345 335 C330 365 300 385 255 400 C215 413 190 420 165 445"/>
-          <path class="root" d="M355 335 C345 368 340 392 320 415 C300 438 270 448 235 460"/>
-          <path class="root" d="M360 335 C400 355 440 360 490 372 C540 384 560 400 580 428"/>
-          <path class="root" d="M355 335 C370 365 400 385 445 400 C485 413 510 420 535 445"/>
-          <path class="root" d="M348 335 C358 368 363 392 383 415 C403 438 433 448 468 460"/>
-        </g>
-
-        <!-- laptop wrapped by roots -->
-        <g class="tech-node" transform="translate(80,395)">
-          <!-- laptop base -->
-          <rect class="laptop__base" x="-6" y="60" width="162" height="9" rx="4.5"/>
-          <!-- laptop lid -->
-          <path class="laptop__lid" d="M15 0 H135 A5 5 0 0 1 140 5 V60 H10 V5 A5 5 0 0 1 15 0 Z"/>
-          <!-- webcam -->
-          <circle cx="75" cy="4" r="1.5" fill="#16211D"/>
-          <circle cx="75" cy="4" r="0.6" fill="#4FAE7C" opacity="0.8"/>
-          <!-- screen bezel/inner -->
-          <rect class="laptop__screen" x="16" y="8" width="118" height="48" rx="1.5"/>
-          <!-- code container -->
-          <foreignObject x="20" y="12" width="110" height="40">
-            <div xmlns="http://www.w3.org/1999/xhtml" class="laptop__code" id="typedCode"></div>
-          </foreignObject>
-          <!-- opening notch on base -->
-          <path d="M 65 60 H 85 V 61.5 A 1.5 1.5 0 0 1 83.5 63 H 66.5 A 1.5 1.5 0 0 1 65 61.5 Z" fill="#0B1210" opacity="0.5"/>
-        </g>
-
-        <!-- tablet on the right -->
-        <g class="tech-node" transform="translate(500,395)">
-          <rect class="tablet__body" x="0" y="15" width="100" height="70" rx="6" fill="#1C2822" stroke="#26A69A" stroke-width="1"/>
-          <rect class="tablet__screen" x="5" y="20" width="90" height="60" rx="3" fill="#0B1210"/>
-          <!-- AI neural network icon -->
-          <g stroke="#26A69A" stroke-width="1.5" fill="#26A69A">
-            <circle cx="25" cy="35" r="3"/>
-            <circle cx="25" cy="65" r="3"/>
-            <circle cx="50" cy="50" r="4.5"/>
-            <circle cx="75" cy="35" r="3"/>
-            <circle cx="75" cy="65" r="3"/>
-            <line x1="25" y1="35" x2="50" y2="50"/>
-            <line x1="25" y1="65" x2="50" y2="50"/>
-            <line x1="50" y1="50" x2="75" y2="35"/>
-            <line x1="50" y1="50" x2="75" y2="65"/>
-          </g>
-        </g>
-
-        <!-- glowing pulses traveling along the roots -->
-        <circle class="pulse" r="3.4">
-          <animateMotion dur="3.2s" repeatCount="indefinite" path="M340 335 C300 355 260 360 210 372 C160 384 140 400 120 428"/>
-        </circle>
-        <circle class="pulse pulse--b" r="3">
-          <animateMotion dur="2.6s" repeatCount="indefinite" path="M355 335 C345 368 340 392 320 415 C300 438 270 448 235 460"/>
-        </circle>
-        <circle class="pulse pulse--c" r="3.4">
-          <animateMotion dur="3s" repeatCount="indefinite" path="M360 335 C400 355 440 360 490 372 C540 384 560 400 580 428"/>
-        </circle>
-        <circle class="pulse pulse--d" r="3">
-          <animateMotion dur="2.8s" repeatCount="indefinite" path="M348 335 C358 368 363 392 383 415 C403 438 433 448 468 460"/>
-        </circle>
+        <!-- Core sun as a 1/4th circle perfectly in the corner -->
+        <circle cx="0" cy="0" r="90" fill="var(--beam-color)" filter="url(#sun-glow)" />
       </svg>
 
-      <div class="ground"></div>
-    </div>
+        <!-- unified tree + root + tech scene -->
+        <svg class="tree-scene" viewBox="0 0 700 520" xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="xMidYMax meet">
 
-    <div class="hero__content-card">
-      <p class="hero__eyebrow">Full-Stack Developer · AI Enthusiast</p>
-      <h1 class="hero__title">Mussarrat Kittur</h1>
-      <p class="hero__tagline">I grow ideas from a blank editor into products people use — React, Node, and a little bit of machine learning, planted under a lot of late-night debugging.</p>
-      <div class="hero__actions">
-        <a href="#projects" class="btn btn--primary hero-btn">See the work</a>
-        <a href="#play" class="btn btn--ghost hero-btn">Debug my code →</a>
+          <!-- canopy -->
+          <g class="tree__canopy">
+            <circle class="leaf" cx="350" cy="150" r="130" />
+            <circle class="leaf leaf--b" cx="230" cy="200" r="95" />
+            <circle class="leaf leaf--c" cx="470" cy="200" r="95" />
+            <circle class="leaf leaf--d" cx="350" cy="80" r="85" />
+            <circle class="leaf leaf--e" cx="260" cy="110" r="70" />
+            <circle class="leaf leaf--f" cx="440" cy="110" r="70" />
+          </g>
+          <g class="fireflies">
+            <circle class="firefly" cx="260" cy="180" r="3" />
+            <circle class="firefly firefly--2" cx="460" cy="150" r="2.5" />
+            <circle class="firefly firefly--3" cx="350" cy="220" r="2.5" />
+            <circle class="firefly firefly--4" cx="400" cy="100" r="2" />
+          </g>
+
+          <!-- trunk -->
+          <path class="tree__trunk"
+            d="M330 335 C325 270 322 220 330 165 C334 145 366 145 370 165 C378 220 375 270 370 335 Z" />
+
+          <!-- ground line -->
+          <line class="ground-line" x1="0" y1="340" x2="700" y2="340" />
+
+          <!-- exposed roots wrapping the tech -->
+          <g class="roots">
+            <path class="root" d="M340 335 C300 355 260 360 210 372 C160 384 140 400 120 428" />
+            <path class="root" d="M345 335 C330 365 300 385 255 400 C215 413 190 420 165 445" />
+            <path class="root" d="M355 335 C345 368 340 392 320 415 C300 438 270 448 235 460" />
+            <path class="root" d="M360 335 C400 355 440 360 490 372 C540 384 560 400 580 428" />
+            <path class="root" d="M355 335 C370 365 400 385 445 400 C485 413 510 420 535 445" />
+            <path class="root" d="M348 335 C358 368 363 392 383 415 C403 438 433 448 468 460" />
+          </g>
+
+          <!-- laptop wrapped by roots -->
+          <g class="tech-node" transform="translate(80,395)">
+            <!-- laptop base -->
+            <rect class="laptop__base" x="-6" y="60" width="162" height="9" rx="4.5" />
+            <!-- laptop lid -->
+            <path class="laptop__lid" d="M15 0 H135 A5 5 0 0 1 140 5 V60 H10 V5 A5 5 0 0 1 15 0 Z" />
+            <!-- webcam -->
+            <circle cx="75" cy="4" r="1.5" fill="#16211D" />
+            <circle cx="75" cy="4" r="0.6" fill="#4FAE7C" opacity="0.8" />
+            <!-- screen bezel/inner -->
+            <rect class="laptop__screen" x="16" y="8" width="118" height="48" rx="1.5" />
+            <!-- code container -->
+            <foreignObject x="20" y="12" width="110" height="40">
+              <div xmlns="http://www.w3.org/1999/xhtml" class="laptop__code" id="typedCode"></div>
+            </foreignObject>
+            <!-- opening notch on base -->
+            <path d="M 65 60 H 85 V 61.5 A 1.5 1.5 0 0 1 83.5 63 H 66.5 A 1.5 1.5 0 0 1 65 61.5 Z" fill="#0B1210"
+              opacity="0.5" />
+          </g>
+
+          <!-- tablet on the right -->
+          <g class="tech-node" transform="translate(500,395)">
+            <rect class="tablet__body" x="0" y="15" width="100" height="70" rx="6" fill="#1C2822" stroke="#26A69A"
+              stroke-width="1" />
+            <rect class="tablet__screen" x="5" y="20" width="90" height="60" rx="3" fill="#0B1210" />
+            <!-- AI neural network icon -->
+            <g stroke="#26A69A" stroke-width="1.5" fill="#26A69A">
+              <circle cx="25" cy="35" r="3" />
+              <circle cx="25" cy="65" r="3" />
+              <circle cx="50" cy="50" r="4.5" />
+              <circle cx="75" cy="35" r="3" />
+              <circle cx="75" cy="65" r="3" />
+              <line x1="25" y1="35" x2="50" y2="50" />
+              <line x1="25" y1="65" x2="50" y2="50" />
+              <line x1="50" y1="50" x2="75" y2="35" />
+              <line x1="50" y1="50" x2="75" y2="65" />
+            </g>
+          </g>
+
+          <!-- glowing pulses traveling along the roots -->
+          <circle class="pulse" r="3.4">
+            <animateMotion dur="3.2s" repeatCount="indefinite"
+              path="M340 335 C300 355 260 360 210 372 C160 384 140 400 120 428" />
+          </circle>
+          <circle class="pulse pulse--b" r="3">
+            <animateMotion dur="2.6s" repeatCount="indefinite"
+              path="M355 335 C345 368 340 392 320 415 C300 438 270 448 235 460" />
+          </circle>
+          <circle class="pulse pulse--c" r="3.4">
+            <animateMotion dur="3s" repeatCount="indefinite"
+              path="M360 335 C400 355 440 360 490 372 C540 384 560 400 580 428" />
+          </circle>
+          <circle class="pulse pulse--d" r="3">
+            <animateMotion dur="2.8s" repeatCount="indefinite"
+              path="M348 335 C358 368 363 392 383 415 C403 438 433 448 468 460" />
+          </circle>
+        </svg>
+
+        <div class="ground"></div>
       </div>
-    </div>
 
-    <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
-      <span></span>
-    </a>
-  </section>
-
-  <!-- ============ ABOUT ============ -->
-  <section class="section" id="about">
-    <div class="section__head">
-      <p class="eyebrow">About</p>
-      <h2>Building things, one commit at a time.</h2>
-    </div>
-    <div class="about__grid">
-      <div class="about__image-wrap">
-        <img src="images/profile.jpeg" alt="Mussarrat Kittur" class="about__image" onerror="this.outerHTML='<div class=\'image-slot about__image\' data-label=\'Image missing\'></div>'">
-      </div>
-      <div class="about__text">
-        <p>I'm a Computer Science student at MVJ College of Engineering, Bangalore, currently holding a 9.40 CGPA, with hands-on experience building full-stack web applications using React.js, Node.js, and modern databases.</p>
-        <p>I care about scalable REST APIs, clean system design, and shipping products that actually get used — like a placement portal currently live for students and recruiters at my college. Alongside web development, I'm exploring AI-driven applications: prediction models, chatbots, and prompt engineering.</p>
-        <p>Outside of code, I lead <strong>Inscribe</strong>, my college's tech club, and help organize hackathons that pull in 50–80+ participants.</p>
-        <div class="about__stats">
-          <div class="stat"><span class="stat__num">9.40</span><span class="stat__label">CGPA</span></div>
-          <div class="stat"><span class="stat__num">5</span><span class="stat__label">Shipped projects</span></div>
-          <div class="stat"><span class="stat__num">3</span><span class="stat__label">Internships</span></div>
+      <div class="hero__content-card">
+        <p class="hero__eyebrow">Full-Stack Developer · AI Enthusiast</p>
+        <h1 class="hero__title">Mussarrat Kittur</h1>
+        <p class="hero__tagline">I grow ideas from a blank editor into products people use — React, Node, and a little
+          bit of machine learning, planted under a lot of late-night debugging.</p>
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--primary hero-btn">See the work</a>
+          <a href="#play" class="btn btn--ghost hero-btn">Debug my code →</a>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ============ SKILLS ============ -->
-  <section class="section section--alt" id="skills">
-    <div class="section__head">
-      <p class="eyebrow">Skills</p>
-      <h2>The toolbox.</h2>
-    </div>
-    <div class="skills__grid">
-      <div class="skill-group">
-        <h3>Languages</h3>
-        <div class="tags"><span>Java (DSA)</span><span>Python</span><span>JavaScript</span><span>SQL</span></div>
-      </div>
-      <div class="skill-group">
-        <h3>Web &amp; Backend</h3>
-        <div class="tags"><span>React.js</span><span>Node.js</span><span>Express.js</span><span>REST APIs</span><span>HTML/CSS</span></div>
-      </div>
-      <div class="skill-group">
-        <h3>Databases</h3>
-        <div class="tags"><span>MongoDB</span><span>MySQL</span><span>Firebase</span></div>
-      </div>
-      <div class="skill-group">
-        <h3>Cloud &amp; DevOps</h3>
-        <div class="tags"><span>GCP</span><span>Docker</span><span>CI/CD</span><span>Azure</span></div>
-      </div>
-      <div class="skill-group">
-        <h3>AI &amp; Data</h3>
-        <div class="tags"><span>Scikit-learn</span><span>Machine Learning</span><span>Prompt Engineering</span><span>AI Chatbots</span></div>
-      </div>
-      <div class="skill-group">
-        <h3>Tools &amp; Frameworks</h3>
-        <div class="tags"><span>Flask</span><span>Streamlit</span><span>Git</span><span>GitHub</span></div>
-      </div>
-    </div>
-  </section>
+      <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+        <span></span>
+      </a>
+    </section>
 
-  <!-- ============ PROJECTS ============ -->
-  <section class="section" id="projects">
-    <div class="section__head">
-      <p class="eyebrow">Projects</p>
-      <h2>Things I've shipped.</h2>
-    </div>
-    <div class="projects__grid">
-
-      <article class="project-card">
-        <div class="image-slot project-card__image" data-label="images/project-loan.jpg"></div>
-        <!-- <img src="images/project-loan.jpg" alt="Loan Prediction System dashboard" class="project-card__image"> -->
-        <div class="project-card__body">
-          <h3>Loan Prediction System</h3>
-          <p>Predicts loan approval from historical banking data using Logistic Regression, Decision Trees, and Random Forest, reaching 85%+ accuracy after feature engineering and evaluation.</p>
-          <div class="tags tags--sm"><span>Python</span><span>Scikit-learn</span><span>ML</span></div>
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="section__head">
+        <p class="eyebrow">About</p>
+        <h2>Building things, one commit at a time.</h2>
+      </div>
+      <div class="about__grid">
+        <div class="about__image-wrap">
+          <img src="images/profile.jpeg" alt="Mussarrat Kittur" class="about__image"
+            onerror="this.outerHTML='<div class=\'image-slot about__image\' data-label=\'Image missing\'></div>'">
         </div>
-      </article>
-
-      <article class="project-card">
-        <div class="image-slot project-card__image" data-label="images/project-jarvis.jpg"></div>
-        <!-- <img src="images/project-jarvis.jpg" alt="AI Virtual Assistant demo" class="project-card__image"> -->
-        <div class="project-card__body">
-          <h3>AI Virtual Assistant (Jarvis Clone)</h3>
-          <p>A Python voice assistant that executes system commands, runs web searches, and automates email, built on a modular task-handling pipeline for easy extension.</p>
-          <div class="tags tags--sm"><span>Python</span><span>Speech Recognition</span><span>NLP</span></div>
-          <a href="https://mussarrat-cod.github.io/Jarvis-like/" class="project-card__link">Live demo ↗</a>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="image-slot project-card__image" data-label="images/project-placement.jpg"></div>
-        <!-- <img src="images/project-placement.jpg" alt="College Placement Portal screenshot" class="project-card__image"> -->
-        <div class="project-card__body">
-          <h3>College Placement Portal</h3>
-          <p>A MERN + Firebase platform connecting students with recruiters, live for students and recruiters at MVJ College of Engineering, with resume analysis and real-time recruiter updates.</p>
-          <div class="tags tags--sm"><span>MongoDB</span><span>Express</span><span>React</span><span>Node</span><span>Firebase</span></div>
-          <a href="https://mvjlaunchpad.in/" class="project-card__link">Live demo ↗</a>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="image-slot project-card__image" data-label="images/project-recipe.jpg"></div>
-        <!-- <img src="images/project-recipe.jpg" alt="Recipe Generator app screenshot" class="project-card__image"> -->
-        <div class="project-card__body">
-          <h3>Recipe Generator</h3>
-          <p>An AI-powered Streamlit app that generates recipes from whatever ingredients you already have, pulling from the Spoonacular API.</p>
-          <div class="tags tags--sm"><span>Python</span><span>Streamlit</span><span>API</span></div>
-          <a href="#" class="project-card__link">Live demo ↗</a>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="image-slot project-card__image" data-label="images/project-fakereview.jpg"></div>
-        <!-- <img src="images/project-fakereview.jpg" alt="Fake Review Detection System screenshot" class="project-card__image"> -->
-        <div class="project-card__body">
-          <h3>Fake Review Detection System</h3>
-          <p>An ML system using SVM, Random Forest, and Logistic Regression to flag fake reviews, reaching 82–88% accuracy behind a Flask web interface.</p>
-          <div class="tags tags--sm"><span>Python</span><span>Flask</span><span>ML</span></div>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- ============ EXPERIENCE ============ -->
-  <section class="section section--alt" id="experience">
-    <div class="section__head">
-      <p class="eyebrow">Experience</p>
-      <h2>Where I've worked.</h2>
-    </div>
-    <div class="timeline">
-      <div class="timeline__item">
-        <div class="timeline__dot"></div>
-        <div class="timeline__content">
-          <p class="timeline__date">Oct 2025 — Present</p>
-          <h3>SDE Intern · Mobrio Studio</h3>
-          <p>Developed a tutor-finding website built exclusively for guitarists, and collaborated with the developer team on technical events.</p>
+        <div class="about__text">
+          <p>I'm a Computer Science student at MVJ College of Engineering, Bangalore, currently holding a 9.40 CGPA,
+            with hands-on experience building full-stack web applications using React.js, Node.js, and modern databases.
+          </p>
+          <p>I care about scalable REST APIs, clean system design, and shipping products that actually get used — like a
+            placement portal currently live for students and recruiters at my college. Alongside web development, I'm
+            exploring AI-driven applications: prediction models, chatbots, and prompt engineering.</p>
+          <p>Outside of code, I lead <strong>Inscribe</strong>, my college's tech club, and help organize hackathons
+            that pull in 50–80+ participants.</p>
+          <div class="about__stats">
+            <div class="stat"><span class="stat__num">9.40</span><span class="stat__label">CGPA</span></div>
+            <div class="stat"><span class="stat__num">5</span><span class="stat__label">Shipped projects</span></div>
+            <div class="stat"><span class="stat__num">3</span><span class="stat__label">Internships</span></div>
+          </div>
         </div>
       </div>
-      <div class="timeline__item">
-        <div class="timeline__dot"></div>
-        <div class="timeline__content">
-          <p class="timeline__date">Aug 2025 — Nov 2025</p>
-          <h3>Frontend Web Development Intern · IBM (Edunet Skills)</h3>
-          <p>Built responsive UI components with HTML, CSS, JavaScript, and Bootstrap, improving UI consistency and usability across applications.</p>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section section--alt" id="skills">
+      <div class="section__head">
+        <p class="eyebrow">Skills</p>
+        <h2>The toolbox.</h2>
+      </div>
+      <div class="skills__grid">
+        <div class="skill-group">
+          <h3>Languages</h3>
+          <div class="tags"><span>Java (DSA)</span><span>Python</span><span>JavaScript</span><span>SQL</span></div>
+        </div>
+        <div class="skill-group">
+          <h3>Web &amp; Backend</h3>
+          <div class="tags"><span>React.js</span><span>Node.js</span><span>Express.js</span><span>REST
+              APIs</span><span>HTML/CSS</span></div>
+        </div>
+        <div class="skill-group">
+          <h3>Databases</h3>
+          <div class="tags"><span>MongoDB</span><span>MySQL</span><span>Firebase</span></div>
+        </div>
+        <div class="skill-group">
+          <h3>Cloud &amp; DevOps</h3>
+          <div class="tags"><span>GCP</span><span>Docker</span><span>CI/CD</span><span>Azure</span></div>
+        </div>
+        <div class="skill-group">
+          <h3>AI &amp; Data</h3>
+          <div class="tags"><span>Scikit-learn</span><span>Machine Learning</span><span>Prompt
+              Engineering</span><span>AI Chatbots</span></div>
+        </div>
+        <div class="skill-group">
+          <h3>Tools &amp; Frameworks</h3>
+          <div class="tags"><span>Flask</span><span>Streamlit</span><span>Git</span><span>GitHub</span></div>
         </div>
       </div>
-      <div class="timeline__item">
-        <div class="timeline__dot"></div>
-        <div class="timeline__content">
-          <p class="timeline__date">Jan 2026 — Feb 2026</p>
-          <h3>Microsoft Azure Intern · Microsoft</h3>
-          <p>Deployed and managed scalable cloud-based applications using Azure VMs and storage services.</p>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects">
+      <div class="section__head">
+        <p class="eyebrow">Projects</p>
+        <h2>Things I've shipped.</h2>
+      </div>
+      <div class="projects__grid">
+
+        <article class="project-card">
+          <div class="image-slot project-card__image" data-label="images/project-loan.jpg"></div>
+          <!-- <img src="images/project-loan.jpg" alt="Loan Prediction System dashboard" class="project-card__image"> -->
+          <div class="project-card__body">
+            <h3>Loan Prediction System</h3>
+            <p>Predicts loan approval from historical banking data using Logistic Regression, Decision Trees, and Random
+              Forest, reaching 85%+ accuracy after feature engineering and evaluation.</p>
+            <div class="tags tags--sm"><span>Python</span><span>Scikit-learn</span><span>ML</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="image-slot project-card__image" data-label="images/project-jarvis.jpg"></div>
+          <!-- <img src="images/project-jarvis.jpg" alt="AI Virtual Assistant demo" class="project-card__image"> -->
+          <div class="project-card__body">
+            <h3>AI Virtual Assistant (Jarvis Clone)</h3>
+            <p>A Python voice assistant that executes system commands, runs web searches, and automates email, built on
+              a modular task-handling pipeline for easy extension.</p>
+            <div class="tags tags--sm"><span>Python</span><span>Speech Recognition</span><span>NLP</span></div>
+            <a href="https://mussarrat-cod.github.io/Jarvis-like/" class="project-card__link">Live demo ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="image-slot project-card__image" data-label="images/project-placement.jpg"></div>
+          <!-- <img src="images/project-placement.jpg" alt="College Placement Portal screenshot" class="project-card__image"> -->
+          <div class="project-card__body">
+            <h3>College Placement Portal</h3>
+            <p>A MERN + Firebase platform connecting students with recruiters, live for students and recruiters at MVJ
+              College of Engineering, with resume analysis and real-time recruiter updates.</p>
+            <div class="tags tags--sm">
+              <span>MongoDB</span><span>Express</span><span>React</span><span>Node</span><span>Firebase</span></div>
+            <a href="https://mvjlaunchpad.in/" class="project-card__link">Live demo ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="image-slot project-card__image" data-label="images/project-recipe.jpg"></div>
+          <!-- <img src="images/project-recipe.jpg" alt="Recipe Generator app screenshot" class="project-card__image"> -->
+          <div class="project-card__body">
+            <h3>Recipe Generator</h3>
+            <p>An AI-powered Streamlit app that generates recipes from whatever ingredients you already have, pulling
+              from the Spoonacular API.</p>
+            <div class="tags tags--sm"><span>Python</span><span>Streamlit</span><span>API</span></div>
+            <a href="#" class="project-card__link">Live demo ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="image-slot project-card__image" data-label="images/project-fakereview.jpg"></div>
+          <!-- <img src="images/project-fakereview.jpg" alt="Fake Review Detection System screenshot" class="project-card__image"> -->
+          <div class="project-card__body">
+            <h3>Fake Review Detection System</h3>
+            <p>An ML system using SVM, Random Forest, and Logistic Regression to flag fake reviews, reaching 82–88%
+              accuracy behind a Flask web interface.</p>
+            <div class="tags tags--sm"><span>Python</span><span>Flask</span><span>ML</span></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section section--alt" id="experience">
+      <div class="section__head">
+        <p class="eyebrow">Experience</p>
+        <h2>Where I've worked.</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <p class="timeline__date">Oct 2025 — Present</p>
+            <h3>SDE Intern · Mobrio Studio</h3>
+            <p>Developed a tutor-finding website built exclusively for guitarists, and collaborated with the developer
+              team on technical events.</p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <p class="timeline__date">Aug 2025 — Nov 2025</p>
+            <h3>Frontend Web Development Intern · IBM (Edunet Skills)</h3>
+            <p>Built responsive UI components with HTML, CSS, JavaScript, and Bootstrap, improving UI consistency and
+              usability across applications.</p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <p class="timeline__date">Jan 2026 — Feb 2026</p>
+            <h3>Microsoft Azure Intern · Microsoft</h3>
+            <p>Deployed and managed scalable cloud-based applications using Azure VMs and storage services.</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="leadership">
-      <div class="leadership__col">
-        <h3>Leadership</h3>
-        <ul>
-          <li><strong>President, Inscribe</strong> — Tech club, MVJCE. Organizes technical events and manages club initiatives.</li>
-          <li><strong>Debate Society Representative</strong>, SAAHITYA — Led debate initiatives and public-speaking events.</li>
-          <li><strong>Tech Team Member</strong>, GDG &amp; SDC MVJCE — Developer community initiatives.</li>
-          <li><strong>Event Lead</strong>, SWAYAM &amp; VertechX 2026 — Hosted PixelCraft (50+ participants) and a hackathon (80+ registrations).</li>
-        </ul>
-      </div>
-      <div class="leadership__col">
-        <h3>Awards &amp; Certifications</h3>
-        <ul>
-          <li><strong>Reliance Undergraduate Scholar</strong> — one of 5,000 students selected nationally.</li>
-          <li><strong>Winner, AI India Impact Hackathon 2026</strong> — VTU VRIF.</li>
-          <li><strong>Runner-Up, AI Buildathon 2025</strong> — VertechX, MVJCE.</li>
-          <li><strong>21 Days DSA Challenge</strong> — consistent LeetCode problem-solving streak.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ GAME ============ -->
-  <section class="section" id="play">
-    <div class="section__head">
-      <p class="eyebrow">Take a break</p>
-      <h2>Debug my code.</h2>
-      <p class="section__subhead">Bugs are hiding in the editor. Squash them before the sprint ends.</p>
-    </div>
-
-    <div class="game" id="game">
-      <div class="game__editor">
-        <div class="game__editor-bar">
-          <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
-          <span class="game__filename">app.js</span>
+      <div class="leadership">
+        <div class="leadership__col">
+          <h3>Leadership</h3>
+          <ul>
+            <li><strong>President, Inscribe</strong> — Tech club, MVJCE. Organizes technical events and manages club
+              initiatives.</li>
+            <li><strong>Debate Society Representative</strong>, SAAHITYA — Led debate initiatives and public-speaking
+              events.</li>
+            <li><strong>Tech Team Member</strong>, GDG &amp; SDC MVJCE — Developer community initiatives.</li>
+            <li><strong>Event Lead</strong>, SWAYAM &amp; VertechX 2026 — Hosted PixelCraft (50+ participants) and a
+              hackathon (80+ registrations).</li>
+          </ul>
         </div>
-        <div class="game__code" id="gameField">
-          <pre class="game__code-lines">function build() {
+        <div class="leadership__col">
+          <h3>Awards &amp; Certifications</h3>
+          <ul>
+            <li><strong>Reliance Undergraduate Scholar</strong> — one of 5,000 students selected nationally.</li>
+            <li><strong>Winner, AI India Impact Hackathon 2026</strong> — VTU VRIF.</li>
+            <li><strong>Runner-Up, AI Buildathon 2025</strong> — VertechX, MVJCE.</li>
+            <li><strong>21 Days DSA Challenge</strong> — consistent LeetCode problem-solving streak.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GAME ============ -->
+    <section class="section" id="play">
+      <div class="section__head">
+        <p class="eyebrow">Take a break</p>
+        <h2>Debug my code.</h2>
+        <p class="section__subhead">Bugs are hiding in the editor. Squash them before the sprint ends.</p>
+      </div>
+
+      <div class="game" id="game">
+        <div class="game__editor">
+          <div class="game__editor-bar">
+            <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+            <span class="game__filename">app.js</span>
+          </div>
+          <div class="game__code" id="gameField">
+            <pre class="game__code-lines">function build() {
   const idea = new Idea();
   idea.plant();
   idea.grow();
   return idea.ship();
 }</pre>
+          </div>
+        </div>
+
+        <div class="game__panel">
+          <div class="game__stat">
+            <span class="game__stat-label">Score</span>
+            <span class="game__stat-value" id="scoreVal">0</span>
+          </div>
+          <div class="game__stat">
+            <span class="game__stat-label">Time</span>
+            <span class="game__stat-value" id="timeVal">20</span>
+          </div>
+          <button class="btn btn--primary" id="startGame">Start</button>
+          <p class="game__hint" id="gameHint">Click the 🐛 as they appear.</p>
         </div>
       </div>
+    </section>
 
-      <div class="game__panel">
-        <div class="game__stat">
-          <span class="game__stat-label">Score</span>
-          <span class="game__stat-value" id="scoreVal">0</span>
+    <!-- ============ CONTACT ============ -->
+    <section class="section section--alt" id="contact">
+      <div class="contact">
+        <h2>Let's build something.</h2>
+        <p>Open to internships, full-time SDE roles, and interesting collaborations.</p>
+        <div class="contact__links">
+          <a href="mailto:kitturmussarrat@gmail.com" class="contact__link">
+            <span>Email</span><strong>kitturmussarrat@gmail.com</strong>
+          </a>
+          <a href="https://www.linkedin.com/in/mussarrat-kittur-8b6aa3295/" class="contact__link">
+            <span>LinkedIn</span><strong>/in/mussarrat-kittur</strong>
+          </a>
+          <a href="https://github.com/Mussarrat-cod/" class="contact__link">
+            <span>GitHub</span><strong>@mussarrat-kittur</strong>
+          </a>
+          <a href="tel:+919353801953" class="contact__link">
+            <span>Phone</span><strong>+91 93538 01953</strong>
+          </a>
         </div>
-        <div class="game__stat">
-          <span class="game__stat-label">Time</span>
-          <span class="game__stat-value" id="timeVal">20</span>
-        </div>
-        <button class="btn btn--primary" id="startGame">Start</button>
-        <p class="game__hint" id="gameHint">Click the 🐛 as they appear.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============ CONTACT ============ -->
-  <section class="section section--alt" id="contact">
-    <div class="contact">
-      <h2>Let's build something.</h2>
-      <p>Open to internships, full-time SDE roles, and interesting collaborations.</p>
-      <div class="contact__links">
-        <a href="mailto:kitturmussarrat@gmail.com" class="contact__link">
-          <span>Email</span><strong>kitturmussarrat@gmail.com</strong>
-        </a>
-        <a href="#" class="contact__link">
-          <span>LinkedIn</span><strong>/in/mussarrat-kittur</strong>
-        </a>
-        <a href="#" class="contact__link">
-          <span>GitHub</span><strong>@mussarrat-kittur</strong>
-        </a>
-        <a href="tel:+919353801953" class="contact__link">
-          <span>Phone</span><strong>+91 93538 01953</strong>
-        </a>
-      </div>
-    </div>
-  </section>
+  </main>
 
-</main>
+  <footer class="footer">
+    <p>Designed &amp; built by Mussarrat Kittur · <span id="year"></span></p>
+  </footer>
 
-<footer class="footer">
-  <p>Designed &amp; built by Mussarrat Kittur · <span id="year"></span></p>
-</footer>
-
-<script type="module" src="js/script.js"></script>
+  <script type="module" src="js/script.js"></script>
 </body>
+
 </html>
