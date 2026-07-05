@@ -220,6 +220,7 @@ strong { color: var(--text); }
   left: 50%;
   transform: translateX(-50%);
   width: min(98vw, 950px);
+  max-height: 85vh;
   height: auto;
   z-index: 2;
   overflow: visible;
