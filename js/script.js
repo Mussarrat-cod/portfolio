@@ -1,3 +1,6 @@
+import jarvisMd from '../Blogs/Jarvis.md?raw';
+import mvjMd from '../Blogs/MVJLaunchpad.md?raw';
+
 document.getElementById('year').textContent = new Date().getFullYear();
 
 /* ============ STARFIELD BACKGROUND ============ */
@@ -182,20 +185,75 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 /* ============ DYNAMIC BLOG GENERATION ============ */
 (function initBlog() {
-  const postData = [
+  function escapeHtml(s) {
+    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  function inlineMd(s) {
+    s = escapeHtml(s);
+    s = s.replace(/`([^`]+)`/g, '<code>$1</code>');
+    s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    return s;
+  }
+
+  function mdToHtml(md) {
+    const lines = md.split('\n');
+    let html = '';
+    let inCode = false;
+    let codeBuf = [];
+    let listOpen = false;
+
+    const closeList = () => { if (listOpen) { html += '</ul>'; listOpen = false; } };
+
+    for (const line of lines) {
+      if (line.startsWith('```')) {
+        if (!inCode) { inCode = true; codeBuf = []; closeList(); }
+        else { inCode = false; html += '<pre><code>' + escapeHtml(codeBuf.join('\n')) + '</code></pre>'; }
+        continue;
+      }
+      if (inCode) { codeBuf.push(line); continue; }
+
+      if (line.startsWith('### ')) { closeList(); html += '<h4>' + inlineMd(line.slice(4)) + '</h4>'; }
+      else if (line.startsWith('## ')) { closeList(); html += '<h3>' + inlineMd(line.slice(3)) + '</h3>'; }
+      else if (line.startsWith('# ')) { closeList(); html += '<h2>' + inlineMd(line.slice(2)) + '</h2>'; }
+      else if (/^[-*] /.test(line)) { if (!listOpen) { html += '<ul>'; listOpen = true; } html += '<li>' + inlineMd(line.slice(2)) + '</li>'; }
+      else if (line.trim() === '') { closeList(); }
+      else { closeList(); html += '<p>' + inlineMd(line) + '</p>'; }
+    }
+    closeList();
+    if (inCode) html += '<pre><code>' + escapeHtml(codeBuf.join('\n')) + '</code></pre>';
+    return html;
+  }
+
+  const articles = {
+    jarvis: {
+      title: 'An Inside Look: AI Virtual Assistant (Jarvis Clone)',
+      date: 'Apr 28, 2026',
+      readTime: '8 min read',
+      body: jarvisMd
+    },
+    mvj: {
+      title: 'Building a College Placement Portal with MERN & Firebase',
+      date: 'Jun 12, 2026',
+      readTime: '5 min read',
+      body: mvjMd
+    }
+  };
+
+  const posts = [
     {
       title: 'Building a College Placement Portal with MERN & Firebase',
       date: 'Jun 12, 2026',
       readTime: '5 min read',
       summary: 'A deep dive into building MVJ Launchpad—connecting 1000+ students and recruiters in real-time, integrating resume parsing, and handling high-concurrency interview scheduling.',
-      link: 'https://mvjlaunchpad.in/'
+      modal: 'mvj'
     },
     {
       title: 'An Inside Look: AI Virtual Assistant (Jarvis Clone)',
       date: 'Apr 28, 2026',
-      readTime: '4 min read',
+      readTime: '8 min read',
       summary: 'Designing a desktop assistant in Python with speech recognition, customizable task pipes, and offline fallback models. Refactoring modular pipelines for extensibility.',
-      link: 'https://mussarrat-cod.github.io/Jarvis-like/'
+      modal: 'jarvis'
     },
     {
       title: 'Optimizing Machine Learning Models for Loan Prediction',
@@ -206,12 +264,49 @@ document.getElementById('year').textContent = new Date().getFullYear();
     }
   ];
 
+  let modalEl = null;
+  function openArticle(key) {
+    const art = articles[key];
+    if (!art) return;
+    if (!modalEl) {
+      modalEl = document.createElement('div');
+      modalEl.className = 'blog-modal';
+      modalEl.innerHTML = `
+        <div class="blog-modal-panel">
+          <button class="blog-modal-close" aria-label="Close article">×</button>
+          <div class="blog-modal-meta"></div>
+          <div class="blog-body"></div>
+        </div>`;
+      document.body.appendChild(modalEl);
+      modalEl.addEventListener('click', (e) => {
+        if (e.target === modalEl || e.target.classList.contains('blog-modal-close')) closeArticle();
+      });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeArticle(); });
+    }
+    modalEl.querySelector('.blog-modal-meta').innerHTML =
+      `<span>[ ${art.date} ]</span><span>[ ${art.readTime} ]</span>`;
+    modalEl.querySelector('.blog-modal-meta').insertAdjacentHTML('afterbegin',
+      `<h2>${art.title}</h2>`);
+    modalEl.querySelector('.blog-body').innerHTML = mdToHtml(art.body);
+    modalEl.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeArticle() {
+    if (!modalEl) return;
+    modalEl.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
   const blogGrid = document.getElementById('blogGrid');
   if (blogGrid) {
     blogGrid.innerHTML = '';
-    postData.forEach(post => {
+
+    posts.forEach(post => {
       const card = document.createElement('article');
       card.className = 'blog-card reveal';
+      const action = post.modal
+        ? `<a href="#" class="read" data-modal="${post.modal}">Read Transmission →</a>`
+        : `<a href="${post.link}" class="read" ${post.link.startsWith('http') ? 'target="_blank" rel="noopener"' : ''}>Read Transmission →</a>`;
       card.innerHTML = `
         <div class="blog-meta">
           <span>[ ${post.date} ]</span>
@@ -219,9 +314,14 @@ document.getElementById('year').textContent = new Date().getFullYear();
         </div>
         <h3>${post.title}</h3>
         <p>${post.summary}</p>
-        <a href="${post.link}" class="read" ${post.link.startsWith('http') ? 'target="_blank" rel="noopener"' : ''}>Read Transmission →</a>
+        ${action}
       `;
       blogGrid.appendChild(card);
+    });
+
+    blogGrid.addEventListener('click', (e) => {
+      const link = e.target.closest('[data-modal]');
+      if (link) { e.preventDefault(); openArticle(link.dataset.modal); }
     });
   }
 })();
